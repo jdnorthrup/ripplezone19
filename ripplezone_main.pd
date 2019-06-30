@@ -1,4 +1,4 @@
-#N canvas 335 192 1645 696 10;
+#N canvas 1832 1218 1645 696 10;
 #X obj 378 431 dac~;
 #X obj 258 123 snapshot~;
 #X msg 422 39 bang;
@@ -110,6 +110,10 @@
 #X obj 305 219 clip 20 10000;
 #X obj 458 216 clip 20 10000;
 #X obj 48 85 ctl_input_jdn 13 1 20;
+#X floatatom 107 234 5 0 0 0 - - -;
+#X floatatom 103 268 5 0 0 0 - - -;
+#X floatatom 113 310 5 0 0 0 - - -;
+#X floatatom 108 378 5 0 0 0 - - -;
 #X connect 1 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 1 0;
@@ -152,10 +156,10 @@
 #X connect 36 0 35 0;
 #X connect 37 0 11 0;
 #X connect 37 1 11 1;
-#X connect 38 0 37 3;
-#X connect 39 0 7 0;
-#X connect 40 0 8 0;
 #X connect 41 0 12 1;
 #X connect 42 0 13 1;
-#X connect 43 0 12 2;
-#X connect 43 0 13 2;
+#X connect 44 0 37 3;
+#X connect 45 0 12 2;
+#X connect 45 0 13 2;
+#X connect 46 0 7 0;
+#X connect 47 0 8 0;
