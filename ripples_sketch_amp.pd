@@ -47,11 +47,11 @@
 #X msg 28 461 set \$1;
 #X text 156 30 Load;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array Sample_Loop_A 8.00706e+06 float 2;
-#X coords 0 1 8.00706e+06 -1 256 64 2 0 0;
+#X array Sample_Loop_A 132675 float 2;
+#X coords 0 1 132675 -1 256 64 2 0 0;
 #X restore 28 46 graph;
 #X obj 31 110 hsl 251 8 0 1 0 0 empty empty empty 0 0 0 10 -262144
--1 -1 19580 0;
+-1 -1 24960 0;
 #X obj 28 408 metro 20;
 #X obj 91 155 t b 0;
 #X msg 157 362 1;
@@ -107,11 +107,11 @@
 #X msg 28 461 set \$1;
 #X text 156 30 Load;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array Sample_Loop_B 1.323e+06 float 2;
-#X coords 0 1 1.323e+06 -1 256 64 2 0 0;
+#X array Sample_Loop_B 153400 float 2;
+#X coords 0 1 153400 -1 256 64 2 0 0;
 #X restore 28 46 graph;
 #X obj 31 110 hsl 251 8 0 1 0 0 empty empty empty 0 0 0 10 -262144
--1 -1 19929 0;
+-1 -1 14384 0;
 #X obj 28 408 metro 20;
 #X obj 91 155 t b 0;
 #X msg 157 362 1;
