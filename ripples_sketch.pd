@@ -1,0 +1,66 @@
+#N canvas 637 272 1098 527 10;
+#X msg 163 128 1;
+#X msg 149 162 0;
+#X obj 100 187 readsf~ 2;
+#X obj 109 43 loadbang;
+#X obj 100 475 dac~;
+#X obj 448 53 adc~ 1;
+#X obj 478 300 delread4~ \$0-delay2;
+#X floatatom 480 183 0 0 1000 0 - - -;
+#X obj 481 211 pack 0 1000;
+#X obj 481 236 line~;
+#X msg 176 93 open audio/medium/Beach1_trim1.wav;
+#X obj 186 206 vsl 15 128 0.01 1 1 1 empty empty empty 0 -9 0 10 -262144
+-1 -1 9800 1;
+#X obj 178 364 line~ 0 100;
+#X obj 101 412 *~;
+#X obj 139 412 *~;
+#X obj 236 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 267 182 t b b;
+#X obj 278 239 delay 200;
+#X obj 663 198 vsl 15 128 0.01 0.98 1 1 empty empty empty 0 -9 0 10
+-262144 -1 -1 12700 1;
+#X obj 630 346 line~ 0 100;
+#X obj 477 373 *~;
+#X obj 209 436 else/morph~;
+#X obj 486 419 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -228856
+-1 -1 3000 1;
+#X obj 507 442 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -228856
+-1 -1 2700 1;
+#X text 469 418 A;
+#X text 619 420 B;
+#X text 489 442 A;
+#X text 640 442 B;
+#X obj 439 116 delwrite~ \$0-delay2 4000;
+#X msg 162 66 open audio/medium/splashes.wav;
+#X msg 180 34 open audio/medium/lk_whitney_trim.aif;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 13 0;
+#X connect 2 1 14 0;
+#X connect 2 2 15 0;
+#X connect 3 0 10 0;
+#X connect 5 0 28 0;
+#X connect 6 0 20 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X connect 10 0 2 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 1;
+#X connect 12 0 14 1;
+#X connect 13 0 21 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 1 30 0;
+#X connect 17 0 0 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 1;
+#X connect 20 0 21 1;
+#X connect 21 0 4 0;
+#X connect 21 0 4 1;
+#X connect 22 0 21 2;
+#X connect 23 0 21 3;
+#X connect 29 0 2 0;
+#X connect 30 0 2 0;
