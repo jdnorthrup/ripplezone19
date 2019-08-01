@@ -1,0 +1,22 @@
+#N canvas 998 342 559 594 10;
+#X obj 227 81 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 227 241 else/schmitt 64 100;
+#X obj 242 284 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 74 419 else/float2sig~;
+#X obj 113 469 else/detect~ ms;
+#X obj 111 508 else/display~;
+#X obj 281 379 timer;
+#X obj 278 337 select 1 0;
+#X floatatom 356 408 8 0 0 0 - - -;
+#X obj 37 37 pipe;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 7 1 6 1;
