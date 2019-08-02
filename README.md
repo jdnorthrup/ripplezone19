@@ -5,13 +5,18 @@ TODO:
 x - get MIDI knobs working on Pi.
 x - get audio input working on Pi.
 x - make sure ELSE library works on Pi.
-x get more ambient audio clips, dice up into smaller chunks
- rotating buffers
-x spectral convolution
+x - get more ambient audio clips, dice up into smaller chunks
+x - spectral convolution
+x - duck based on mic
+x - pick from dir of files
+x - have stereo background
+x - have stereo convolution carriers
+- rotating bank of dry / wet (stereo) buffers
+- ripple fx cascade pattern
 
 Audio patch network:
+
 - multiple patches
-- 
 - trim more samples, don't have fades in audio
 
 - vca network, vcs-style?
@@ -27,9 +32,6 @@ Audio patch network:
 - pleasing sequencing?
 	- according to jamie, just skip. no sequencing.
 	- ambient noises only
-- figure out playa mic situation
-- playa knob situation
-- lights
 
 System stuff:
 - how to have the patch auto-start in PD?
