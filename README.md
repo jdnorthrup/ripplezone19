@@ -6,9 +6,13 @@ x - get MIDI knobs working on Pi.
 x - get audio input working on Pi.
 x - make sure ELSE library works on Pi.
 x get more ambient audio clips, dice up into smaller chunks
-- rotating buffers
-- spectral convolution
+ rotating buffers
+x spectral convolution
 
+Audio patch network:
+- multiple patches
+- 
+- trim more samples, don't have fades in audio
 
 - vca network, vcs-style?
 - solve last value thing on ctl_input_jdn macro
@@ -26,6 +30,28 @@ x get more ambient audio clips, dice up into smaller chunks
 - figure out playa mic situation
 - playa knob situation
 - lights
+
+System stuff:
+- how to have the patch auto-start in PD?
+- how to have system auto-sleep at certain time?
+- how to have system power / on start playing at certain time?
+- maybe a timer on a switch?
+- how to "VNC" in on-playa? maybe set up on my work laptop?
+
+Hardware:
+- make the box
+- paint / cover the box with fur
+- which mic?
+- how to mount mic?
+- which switches / lights? (adafruit 30mm?)
+- wire switches + lights into PI
+- do i need anything i could get at lasher?
+
+Audio system:
+- get d-class amp (amazon)
+- speaker wire
+- outdoor speakers vs. car speakers vs. computer speakers?
+- demo the best buy ones, audition.
 
 ...
 
