@@ -10,7 +10,6 @@
 #X obj 281 379 timer;
 #X obj 278 337 select 1 0;
 #X floatatom 356 408 8 0 0 0 - - -;
-#X obj 37 37 pipe;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;

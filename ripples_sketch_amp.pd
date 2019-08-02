@@ -1,4 +1,4 @@
-#N canvas 552 480 1309 897 10;
+#N canvas 605 351 1309 897 10;
 #X obj 107 13 loadbang;
 #X obj 278 846 dac~;
 #X obj 852 238 adc~ 1;
@@ -35,7 +35,7 @@
 #X coords 0 1 8.00706e+06 -1 256 64 2 0 0;
 #X restore 28 46 graph;
 #X obj 31 110 hsl 251 8 0 1 0 0 empty empty empty 0 0 0 10 -262144
--1 -1 3971 0;
+-1 -1 12345 0;
 #X obj 28 408 metro 20;
 #X obj 91 155 t b 0;
 #X msg 157 362 1;
@@ -495,6 +495,13 @@
 #X connect 8 0 0 0;
 #X connect 9 0 1 0;
 #X restore 87 759 pd stero_duck_micOn;
+#X obj 1129 367 timer;
+#X obj 1063 526 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1066 624 timer;
+#X obj 1064 585 select 1 0;
+#X floatatom 1064 656 8 0 0 0 - - -;
+#X obj 1063 494 else/schmitt 0.5 0.8;
 #X connect 0 0 36 0;
 #X connect 0 0 28 0;
 #X connect 0 0 46 0;
@@ -504,6 +511,7 @@
 #X connect 5 0 3 0;
 #X connect 6 0 7 0;
 #X connect 6 0 49 0;
+#X connect 6 0 58 0;
 #X connect 7 0 8 1;
 #X connect 8 0 33 0;
 #X connect 10 0 37 0;
@@ -542,3 +550,8 @@
 #X connect 51 0 52 3;
 #X connect 52 0 1 0;
 #X connect 52 1 1 1;
+#X connect 54 0 56 0;
+#X connect 55 0 57 0;
+#X connect 56 0 55 0;
+#X connect 56 1 55 1;
+#X connect 58 0 54 0;
