@@ -11,8 +11,14 @@ x - duck based on mic
 x - pick from dir of files
 x - have stereo background
 x - have stereo convolution carriers
+- clean up buffer experiment. may need abstraction / clones
+- graphed sequencer(s) for delay fx...
+	see tests/sequence.pd
+- repeating the convolved thing so literally doesn't sound good IMO
+	- rearrange to do live convolution of delayed parts?
 - rotating bank of dry / wet (stereo) buffers
 - ripple fx cascade pattern
+
 
 Audio patch network:
 
