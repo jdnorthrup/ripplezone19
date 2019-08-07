@@ -74,7 +74,7 @@
 #X text 994 320 dBFS;
 #X obj 905 350 else/noisegate~ -40 200;
 #X obj 187 209 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 -262144
--1 -1 2500 1;
+-1 -1 1600 1;
 #X obj 191 406 line~ 0 100;
 #X obj 118 454 *~;
 #X obj 152 454 *~;
@@ -266,20 +266,25 @@
 #X obj 913 745 else/coin 10 80;
 #X obj 758 835 * 1.5;
 #X obj 1047 849 * 2;
-#X msg 371 1226 echoAmp 1 0.8 0.6 0.5 \, echoWet 0.1 0.5 0.7 1;
-#X msg 1019 1229 echoAmp 0.1 0.4 0.6 0.8 \, echoWet 0.9 0.88 0.99 1
-;
-#X msg 708 1229 echoAmp 0 0.2 0.7 0.9 \, echoWet 0.95 0.99 0.8 0.85
-;
+#X msg 384 1230 echoAmp 1 0.8 0.6 0.5 \, echoWet 0.1 0.5 0.7 1;
 #X obj 639 1174 loadbang;
 #X obj 638 1196 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 770 799 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 1 256;
+-1 -1 1.5 256;
 #X obj 1060 820 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 1 256;
+-1 -1 2 256;
+#X obj 1131 182 env~ 128;
+#X obj 1136 250 vu 15 120 empty Input_Level -1 -8 0 10 -66577 -1 1
+0;
+#X obj 1133 209 - 100;
+#X msg 699 1230 echoAmp 0.1 0.6 0.4 0.9 \, echoWet 0.5 0.8 0.2 0.6
+;
+#X msg 1030 1229 echoAmp 0.1 0.4 0.8 0.6 \, echoWet 0.9 0.5 0.7 0.15
+;
 #X connect 0 0 18 0;
 #X connect 2 0 5 0;
+#X connect 2 0 86 0;
 #X connect 3 0 4 0;
 #X connect 3 0 31 0;
 #X connect 3 0 32 0;
@@ -364,11 +369,13 @@
 #X connect 79 0 63 1;
 #X connect 80 0 70 1;
 #X connect 81 0 61 0;
-#X connect 82 0 70 0;
-#X connect 83 0 63 0;
-#X connect 84 0 85 0;
-#X connect 85 0 81 0;
-#X connect 85 0 83 0;
-#X connect 85 0 82 0;
-#X connect 86 0 79 1;
-#X connect 87 0 80 1;
+#X connect 82 0 83 0;
+#X connect 83 0 81 0;
+#X connect 83 0 89 0;
+#X connect 83 0 90 0;
+#X connect 84 0 79 1;
+#X connect 85 0 80 1;
+#X connect 86 0 88 0;
+#X connect 88 0 87 0;
+#X connect 89 0 63 0;
+#X connect 90 0 70 0;
