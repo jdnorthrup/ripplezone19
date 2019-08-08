@@ -290,6 +290,9 @@
 #X obj 1313 214 unpack f f f;
 #X msg 1318 186 14 100 1;
 #X obj 1314 152 expr $i1 == 0;
+#X symbolatom 355 661 10 0 0 0 - - -;
+#X obj 355 630 symbol;
+#X msg 356 597 basdfsdf;
 #X connect 0 0 18 0;
 #X connect 2 0 5 0;
 #X connect 2 0 86 0;
@@ -398,3 +401,5 @@
 #X connect 96 2 95 2;
 #X connect 97 0 96 0;
 #X connect 98 0 97 0;
+#X connect 100 0 99 0;
+#X connect 101 0 100 0;
