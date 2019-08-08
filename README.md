@@ -18,7 +18,7 @@ x - repeating the convolved thing so literally doesn't sound good IMO
 x	- rearrange to do live convolution of delayed parts?
 x - rotating bank of dry / wet (stereo) buffers
 x - ripple fx cascade pattern
-- need to have the graphs remembered in the parent patch somehow?
+x need to have the graphs remembered in the parent patch somehow?
 - rotating bank of fx
 - add else/autofade for loops
 x - clearing buffers
@@ -29,11 +29,17 @@ x - clearing buffers
 - recorders have some better persistence
 - playback indexes separate from recorders?
 - more banks?
+- clear out buffers when switching back?
+
+dorien
+- make it cool
+
+
 
 
 BUGS:
 - fix the else/rotate ... rotate 0 results in longer lists
-- fix the sequenced players to work better and start at first step
+x - fix the sequenced players to work better and start at first step
 - fix the recorder_jdn abstraction to clear buffers / resize?
 
 Audio patch network:
