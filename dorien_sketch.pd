@@ -5,23 +5,22 @@
 #X obj 233 259 delwrite~ \$0-delay2 4000;
 #X text 305 158 mic delay (ms);
 #X obj 488 441 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--228856 -1 -1 7059.94 256;
+-228856 -1 -1 5296.66 256;
 #X obj 579 329 nbx 5 14 0 3000 0 1 empty empty empty 0 -8 0 10 -228856
--1 -1 611.988 256;
+-1 -1 259.332 256;
 #X text 645 330 Delay time (ms);
 #X text 555 445 Feedback (Decay time in ms);
 #X obj 396 461 vsl 18 80 -100 0 0 0 empty empty empty 0 -9 0 10 -228856
--1 -1 7900 1;
+-1 -1 7899 1;
 #X obj 272 500 nbx 5 14 -100 0 0 1 empty empty empty 0 -8 0 10 -228856
 -1 -1 -41 256;
 #X text 267 483 threshold;
 #X text 237 498 dBFS;
-#X obj 143 532 else/noisegate~ -40 200;
+#X obj 170 542 else/noisegate~ -40 200;
 #X obj 241 387 else/fbdelay~ 3000 6000;
 #X obj 213 434 else/compress~ -30 5 5 5 -3 256;
 #X obj 310 178 nbx 5 14 0 3000 0 1 empty empty empty 0 -8 0 10 -228856
 -1 -1 870 256;
-#X obj 105 597 dac~;
 #X obj 96 99 switch~;
 #X obj 97 76 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -37,30 +36,32 @@
 #X obj 318 82 mic_controller_jdn 36 1;
 #X obj 485 317 +~ 800;
 #X obj 476 351 *~ 5;
+#X obj 208 625 outlet~;
+#X obj 275 627 outlet~;
 #X connect 0 0 14 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 10 0 13 1;
-#X connect 13 0 17 1;
-#X connect 13 0 17 0;
+#X connect 13 0 31 0;
+#X connect 13 0 32 0;
 #X connect 14 0 15 0;
 #X connect 15 0 13 0;
 #X connect 15 1 9 0;
 #X connect 16 0 1 0;
+#X connect 18 0 17 0;
 #X connect 19 0 18 0;
-#X connect 20 0 19 0;
-#X connect 21 0 22 0;
-#X connect 22 0 14 1;
-#X connect 22 0 24 0;
-#X connect 22 0 30 0;
-#X connect 23 0 5 0;
-#X connect 24 0 6 0;
-#X connect 25 0 26 1;
-#X connect 26 0 21 0;
+#X connect 20 0 21 0;
+#X connect 21 0 14 1;
+#X connect 21 0 23 0;
+#X connect 21 0 29 0;
+#X connect 22 0 5 0;
+#X connect 23 0 6 0;
+#X connect 24 0 25 1;
+#X connect 25 0 20 0;
+#X connect 26 0 25 0;
 #X connect 27 0 26 0;
-#X connect 28 0 27 0;
-#X connect 29 0 3 0;
-#X connect 29 1 27 0;
-#X connect 30 0 31 0;
-#X connect 31 0 14 2;
-#X connect 31 0 23 0;
+#X connect 28 0 3 0;
+#X connect 28 1 26 0;
+#X connect 29 0 30 0;
+#X connect 30 0 14 2;
+#X connect 30 0 22 0;

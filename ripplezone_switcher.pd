@@ -1,4 +1,4 @@
-#N canvas 194 516 853 708 10;
+#N canvas 471 517 853 708 10;
 #X obj 82 524 dorien_sketch;
 #X obj 177 524 ripples_sketch_amp;
 #X obj 272 367 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
@@ -32,6 +32,19 @@
 #X msg 595 138 \; pd dsp 1;
 #X obj 512 138 delay 100;
 #X msg 457 239 2;
+#X obj 48 235 ambient_playa_jdn;
+#X obj 46 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 227 663 dac~;
+#X obj 55 287 else/gain2~;
+#X obj 173 223 loadbang;
+#X obj 50 616 +~;
+#X obj 84 614 +~;
+#X msg 172 254 0.66;
+#X connect 0 0 34 0;
+#X connect 0 1 34 1;
+#X connect 1 0 34 0;
+#X connect 1 1 34 1;
 #X connect 2 0 3 0;
 #X connect 2 0 4 0;
 #X connect 2 0 24 0;
@@ -68,8 +81,19 @@
 #X connect 24 0 18 0;
 #X connect 24 1 23 0;
 #X connect 25 0 26 0;
+#X connect 26 0 34 0;
+#X connect 26 1 34 1;
 #X connect 27 0 28 0;
 #X connect 28 0 29 0;
 #X connect 28 0 30 0;
 #X connect 30 0 31 0;
 #X connect 31 0 2 0;
+#X connect 32 0 35 0;
+#X connect 32 1 35 1;
+#X connect 33 0 32 0;
+#X connect 35 0 37 0;
+#X connect 35 1 38 0;
+#X connect 36 0 39 0;
+#X connect 37 0 34 0;
+#X connect 38 0 34 1;
+#X connect 39 0 35 2;
