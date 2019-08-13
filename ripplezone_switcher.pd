@@ -1,8 +1,8 @@
-#N canvas 52 107 853 708 10;
+#N canvas 194 516 853 708 10;
 #X obj 82 524 dorien_sketch;
 #X obj 177 524 ripples_sketch_amp;
 #X obj 272 367 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 0;
 #X obj 82 501 expr $i1==0;
 #X obj 177 502 expr $i1==1;
 #X obj 261 8 notein 1;
@@ -13,7 +13,7 @@
 #X obj 339 138 >;
 #X obj 374 139 >;
 #X msg 257 181 0;
-#X msg 298 182 1;
+#X msg 300 180 1;
 #X msg 339 182 2;
 #X msg 377 182 3;
 #X obj 489 548 noteout;
