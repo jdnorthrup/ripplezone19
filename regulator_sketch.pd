@@ -1,0 +1,136 @@
+#N canvas 1528 314 919 650 12;
+#X floatatom 29 203 10 1 10000 0 - - -;
+#X floatatom 27 322 10 20 20000 0 - - -;
+#X floatatom 418 321 5 0 100 0 - - -;
+#X msg 29 221 time \$1;
+#X msg 418 342 resonance \$1;
+#X floatatom 229 203 5 0 100 0 - - -;
+#X msg 785 138 just;
+#X msg 837 138 12tet;
+#X obj 27 360 s bub;
+#X obj 29 241 s bub;
+#X obj 785 171 s bub;
+#X floatatom 26 439 5 0 200 0 - - -;
+#X floatatom 417 438 5 0 100 0 - - -;
+#X obj 26 477 s bub;
+#X floatatom 226 439 5 0 50 0 - - -;
+#X msg 26 457 density \$1;
+#X floatatom 426 544 5 0 100 0 - - -;
+#X obj 28 583 s bub;
+#X msg 28 563 octave \$1;
+#X msg 229 223 timeVariation \$1;
+#X msg 226 459 grainSize \$1;
+#X msg 417 459 grainStartVariation \$1;
+#X msg 426 565 grainReversal \$1;
+#X msg 228 565 octaveVariation \$1;
+#X obj 32 184 hsl 128 15 1 10000 1 0 empty bub_inittime empty -2 -8
+0 10 -228856 -1 -1 8372 1;
+#X text 25 28 +bubbler~;
+#X floatatom 227 323 5 0 200 0 - - -;
+#X obj 230 304 hsl 128 15 0 200 0 0 empty bub_initfb empty -2 -8 0
+10 -228856 -1 -1 4000 1;
+#X obj 232 184 hsl 128 15 0 100 0 0 empty bub_inittimevar empty -2
+-8 0 10 -228856 -1 -1 5750 1;
+#X obj 30 304 hsl 128 15 20 20000 1 0 empty bub_initfilterFreq empty
+-2 -8 0 10 -228856 -1 -1 7000 1;
+#X obj 421 302 hsl 128 15 1 100 0 0 empty bub_initres empty -2 -8 0
+10 -228856 -1 -1 8700 1;
+#X obj 229 420 hsl 128 15 0 50 0 0 empty bub_initgrainsize empty -2
+-8 0 10 -228856 -1 -1 3000 1;
+#X obj 29 420 hsl 128 15 0 200 0 0 empty bub_initdensity empty -2 -8
+0 10 -228856 -1 -1 8700 1;
+#X obj 420 419 hsl 128 15 0 100 0 0 empty bub_initgvar empty -2 -8
+0 10 -228856 -1 -1 10300 1;
+#X obj 429 525 hsl 128 15 0 100 0 0 empty bub_initgrev empty -2 -8
+0 10 -228856 -1 -1 500 1;
+#X msg 27 340 filterFreq \$1;
+#X msg 227 342 feedback \$1;
+#X obj 686 138 notein;
+#X text 227 164 0 - 100%;
+#X text 226 286 0 - 200%;
+#X text 417 284 0 - 100%;
+#X text 25 402 0 - 200%;
+#X text 227 401 0 - 50%;
+#X text 418 399 0 - 100%;
+#X text 427 507 0 - 100%;
+#X text 28 165 1 - 10000 ms (log);
+#X text 24 287 20 - 20kHz (log);
+#X obj 678 355 hsl 128 15 0 100 0 0 bub_delvol bub_initdelvol empty
+-2 -8 0 10 -228856 -1 -1 11700 1;
+#X obj 680 302 hsl 128 15 0 100 0 0 bub_dryvol bub_initdryvol empty
+-2 -8 0 10 -228856 -1 -1 0 1;
+#X text 676 334 Delay Volume (dB);
+#X text 676 281 Dry Volume (dB);
+#X obj 686 171 pack f f;
+#X obj 28 523 hradio 15 1 0 9 empty bub_initoct empty 0 -8 0 10 -262144
+-1 -1 4;
+#X obj 28 541 - 4;
+#X obj 565 189 +bubbler~;
+#X obj 580 156 r bub;
+#N canvas 187 59 254 370 output 0;
+#X obj 89 280 dac~;
+#X obj 110 141 dbtorms;
+#X obj 110 118 r bub_delvol;
+#X obj 89 233 *~;
+#X obj 89 66 inlet~;
+#X msg 110 164 \$1 50;
+#X obj 110 187 line~;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 1;
+#X restore 565 226 pd output;
+#X floatatom 827 302 5 0 100 0 - bub_dryvol -;
+#X floatatom 827 355 5 0 100 0 - bub_delvol -;
+#X obj 228 545 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
+#X obj 22 55 cnv 15 500 60 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X text 27 54 This is a delay using granular synthesis. Small clips
+(grains) of audio are read and re-ordered before being sent to the
+delay output. Various parameters such as playback direction and pitch
+of each grain can be controlled.;
+#X obj 576 83 adc~ 1;
+#X connect 0 0 3 0;
+#X connect 1 0 35 0;
+#X connect 2 0 4 0;
+#X connect 3 0 9 0;
+#X connect 4 0 8 0;
+#X connect 5 0 19 0;
+#X connect 6 0 10 0;
+#X connect 7 0 10 0;
+#X connect 11 0 15 0;
+#X connect 12 0 21 0;
+#X connect 14 0 20 0;
+#X connect 15 0 13 0;
+#X connect 16 0 22 0;
+#X connect 18 0 17 0;
+#X connect 19 0 9 0;
+#X connect 20 0 13 0;
+#X connect 21 0 13 0;
+#X connect 22 0 17 0;
+#X connect 23 0 17 0;
+#X connect 24 0 0 0;
+#X connect 26 0 36 0;
+#X connect 27 0 26 0;
+#X connect 28 0 5 0;
+#X connect 29 0 1 0;
+#X connect 30 0 2 0;
+#X connect 31 0 14 0;
+#X connect 32 0 11 0;
+#X connect 33 0 12 0;
+#X connect 34 0 16 0;
+#X connect 35 0 8 0;
+#X connect 36 0 8 0;
+#X connect 37 0 51 0;
+#X connect 37 1 51 1;
+#X connect 51 0 54 1;
+#X connect 52 0 53 0;
+#X connect 53 0 18 0;
+#X connect 54 0 56 0;
+#X connect 55 0 54 0;
+#X connect 59 0 23 0;
+#X connect 62 0 54 0;

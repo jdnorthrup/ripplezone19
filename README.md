@@ -34,6 +34,15 @@ x - clearing buffers
 dorien
 - make it cool
 
+regulator
+- start from the soundhack granular thing?
+
+rain
+- tbd. little fragments raining down.
+
+ice sketch
+- good start. maybe animate it?
+
 
 
 

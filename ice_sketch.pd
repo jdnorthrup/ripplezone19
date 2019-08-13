@@ -1,0 +1,115 @@
+#N canvas 1201 316 1045 959 10;
+#X obj 506 305 delread4~ \$0-delay2;
+#X obj 553 218 pack 0 1000;
+#X obj 553 243 line~;
+#X obj 477 273 delwrite~ \$0-delay2 4000;
+#X text 549 172 mic delay (ms);
+#X obj 732 455 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-228856 -1 -1 7799.49 256;
+#X obj 823 343 nbx 5 14 0 3000 0 1 empty empty empty 0 -8 0 10 -228856
+-1 -1 759.898 256;
+#X text 889 344 Delay time (ms);
+#X text 799 459 Feedback (Decay time in ms);
+#X obj 640 475 vsl 18 80 -100 0 0 0 empty empty empty 0 -9 0 10 -228856
+-1 -1 7900 1;
+#X obj 516 514 nbx 5 14 -100 0 0 1 empty empty empty 0 -8 0 10 -228856
+-1 -1 -41 256;
+#X text 511 497 threshold;
+#X text 481 512 dBFS;
+#X obj 340 550 else/noisegate~ -40 200;
+#X obj 485 401 else/fbdelay~ 3000 6000;
+#X obj 457 448 else/compress~ -30 5 5 5 -3 256;
+#X obj 554 192 nbx 5 14 0 3000 0 1 empty empty empty 0 -8 0 10 -228856
+-1 -1 870 256;
+#X obj 96 99 switch~;
+#X obj 97 76 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 98 54 inlet;
+#X obj 705 247 *~ 800;
+#X obj 705 295 +~ 801;
+#X obj 732 406 else/sig2float~ 20;
+#X obj 802 289 else/sig2float~ 20;
+#X obj 760 170 phasor~ 0.1;
+#X obj 706 199 -~;
+#X floatatom 707 167 5 0 0 0 - - -;
+#X obj 733 121 loadbang;
+#X obj 729 331 +~ 800;
+#X obj 720 365 *~ 5;
+#X obj 296 828 outlet~;
+#X obj 363 830 outlet~;
+#X obj 218 200 nbx 6 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 21 256;
+#X obj 296 200 nbx 6 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 -131 256;
+#X text 220 182 speed (%);
+#X text 311 180 cents;
+#X obj 344 223 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X text 366 227 <= reset;
+#X obj 562 96 mic_controller_jdn 39 7;
+#X obj 408 197 select 1;
+#X obj 158 257 else/pvoc.live~ 6000 20 -200;
+#X obj 513 625 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 582 626 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 651 626 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 444 654 else/flanger~ 0.1 20 -0.6 -tri;
+#X text 518 605 rate;
+#X text 584 605 depth;
+#X text 654 605 coefficient;
+#X obj 167 628 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 236 629 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 305 629 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X text 172 608 rate;
+#X text 238 608 depth;
+#X text 308 608 coefficient;
+#X obj 96 657 else/flanger~ 0.12 20 -0.6 -tri;
+#X obj 250 736 else/free.rev~ 0.5 0.2 1 0.5;
+#X connect 0 0 14 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 10 0 13 1;
+#X connect 13 0 44 0;
+#X connect 13 0 54 0;
+#X connect 15 0 13 0;
+#X connect 15 1 9 0;
+#X connect 16 0 1 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 21 0 14 1;
+#X connect 21 0 23 0;
+#X connect 21 0 28 0;
+#X connect 22 0 5 0;
+#X connect 23 0 6 0;
+#X connect 24 0 25 1;
+#X connect 25 0 20 0;
+#X connect 26 0 25 0;
+#X connect 26 0 39 0;
+#X connect 27 0 26 0;
+#X connect 28 0 29 0;
+#X connect 29 0 14 2;
+#X connect 29 0 22 0;
+#X connect 32 0 40 1;
+#X connect 33 0 40 2;
+#X connect 36 0 40 3;
+#X connect 38 0 3 0;
+#X connect 38 0 40 0;
+#X connect 38 1 26 0;
+#X connect 39 0 36 0;
+#X connect 40 0 15 0;
+#X connect 41 0 44 1;
+#X connect 42 0 44 2;
+#X connect 43 0 44 3;
+#X connect 44 0 55 1;
+#X connect 48 0 54 1;
+#X connect 49 0 54 2;
+#X connect 50 0 54 3;
+#X connect 54 0 55 0;
+#X connect 55 0 30 0;
+#X connect 55 1 31 0;
