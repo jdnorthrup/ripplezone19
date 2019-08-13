@@ -1,4 +1,4 @@
-#N canvas 666 261 853 708 10;
+#N canvas 52 107 853 708 10;
 #X obj 82 524 dorien_sketch;
 #X obj 177 524 ripples_sketch_amp;
 #X obj 272 367 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
@@ -27,6 +27,11 @@
 #X obj 435 393 t f b;
 #X obj 315 502 expr $i1==2;
 #X obj 315 524 ripplezone_main;
+#X obj 597 67 loadbang;
+#X obj 597 101 delay 100;
+#X msg 595 138 \; pd dsp 1;
+#X obj 512 138 delay 100;
+#X msg 457 239 2;
 #X connect 2 0 3 0;
 #X connect 2 0 4 0;
 #X connect 2 0 24 0;
@@ -63,3 +68,8 @@
 #X connect 24 0 18 0;
 #X connect 24 1 23 0;
 #X connect 25 0 26 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 28 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 2 0;
