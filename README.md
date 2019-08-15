@@ -21,6 +21,9 @@ x - ripple fx cascade pattern
 x need to have the graphs remembered in the parent patch somehow?
 x - rotating bank of fx
 x - clearing buffers
+- definitely do the carriers in ram
+- why is ripples sketch so much louder than the others for mic input?
+- set the light of the current sketch on startup
 - trim more samples, don't have fades in audio
 - recorders have some better persistence
 - more banks?
