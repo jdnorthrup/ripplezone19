@@ -28,6 +28,7 @@ x - clearing buffers
 - recorders have some better persistence
 - more banks?
 - clear out buffers when switching back?
+- mystery of the recorder_jdn buffers clearing, is it right?
 
 CBB:
 - add else/autofade for loops ?
