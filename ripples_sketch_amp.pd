@@ -1,4 +1,4 @@
-#N canvas 306 97 1579 1229 10;
+#N canvas 0 23 1440 855 10;
 #X obj 980 411 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 976 533 timer;
@@ -15,9 +15,9 @@
 #X obj 520 84 r recLength;
 #X msg 521 114 recLength \$1;
 #X obj 802 257 vradio 15 1 0 6 sdvs asfgasgf empty 0 -8 0 10 -228856
--1 -1 1;
+-1 -1 2;
 #X obj 732 367 nbx 2 15 -1e+37 1e+37 0 0 xfkvds asfmnv empty 0 -8 0
-12 -228856 -1 -1 1 256;
+12 -228856 -1 -1 2 256;
 #X text 820 257 none;
 #X text 820 272 1st;
 #X text 820 287 2nd;
@@ -46,34 +46,28 @@
 #X obj 885 711 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 786 750 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256;
+-262144 -1 -1 3 256;
 #X obj 492 728 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 2 256;
 #X obj 934 775 sequenced_player_jdn;
 #X obj 938 679 r recLength;
 #X obj 1068 675 r curRecorder;
 #X obj 1181 715 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1082 754 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 3 256;
+10 -262144 -1 -1 1 256;
 #X obj 609 576 else/coin 10 100;
 #X obj 737 605 else/coin 10 90;
 #X obj 830 630 else/coin 10 80;
 #X obj 675 720 * 1.5;
 #X obj 964 734 * 2;
-#X msg 301 1115 echoAmp 1 0.8 0.6 0.5 \, echoWet 0.1 0.5 0.7 1;
 #X obj 556 1059 loadbang;
 #X obj 555 1081 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 687 684 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 1.5 256;
+-1 -1 0.1 256;
 #X obj 977 705 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 2 256;
-#X msg 616 1115 echoAmp 0.1 0.6 0.4 0.9 \, echoWet 0.5 0.8 0.2 0.6
-;
-#X msg 947 1114 echoAmp 0.1 0.4 0.8 0.6 \, echoWet 0.9 0.5 0.7 0.15
-;
-#X obj 824 116 mic_controller_jdn 37 3;
+-1 -1 0.1 256;
 #X obj 700 1158 +~;
 #X obj 935 1154 +~;
 #X obj 864 1242 outlet~;
@@ -96,6 +90,17 @@
 #X obj 172 144 s \$0-enable;
 #X obj 661 1187 r \$0-enable;
 #X obj 740 1210 else/autofade2~ 150 500 2;
+#X msg 301 1115 echoAmp 1 0.8 0.6 0.5 \, echoWet 0.3 0.7 0.9 1;
+#X msg 616 1115 echoAmp 0.1 0.6 0.4 0.9 \, echoWet 0.8 0.85 0.2 0.77
+;
+#X msg 947 1114 echoAmp 0.1 0.4 0.8 0.6 \, echoWet 0.9 0.6 0.7 0.4
+;
+#X obj 500 592 float \$1;
+#X obj 1154 593 float \$2;
+#X obj 491 520 else/loadbanger;
+#X obj 490 496 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 771 94 mic_controller_jdn \$3 \$4;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -110,16 +115,16 @@
 #X connect 10 0 26 0;
 #X connect 11 0 23 0;
 #X connect 12 0 13 0;
-#X connect 13 0 66 0;
+#X connect 13 0 62 0;
 #X connect 14 0 15 0;
 #X connect 15 0 29 0;
 #X connect 15 0 31 0;
-#X connect 15 0 66 1;
-#X connect 15 0 67 1;
-#X connect 23 0 66 0;
-#X connect 24 0 66 0;
+#X connect 15 0 62 1;
+#X connect 15 0 63 1;
+#X connect 23 0 62 0;
+#X connect 24 0 62 0;
 #X connect 25 0 47 0;
-#X connect 25 0 67 0;
+#X connect 25 0 63 0;
 #X connect 26 0 24 0;
 #X connect 26 1 25 0;
 #X connect 27 0 28 0;
@@ -129,18 +134,18 @@
 #X connect 32 0 34 1;
 #X connect 33 0 34 2;
 #X connect 33 0 41 0;
-#X connect 34 0 60 0;
-#X connect 34 1 61 0;
+#X connect 34 0 56 0;
+#X connect 34 1 57 0;
 #X connect 35 0 34 3;
-#X connect 36 0 60 0;
-#X connect 36 1 61 0;
+#X connect 36 0 56 0;
+#X connect 36 1 57 0;
 #X connect 37 0 50 0;
-#X connect 38 0 68 0;
+#X connect 38 0 64 0;
 #X connect 39 0 36 3;
-#X connect 42 0 60 0;
-#X connect 42 1 61 0;
+#X connect 42 0 56 0;
+#X connect 42 1 57 0;
 #X connect 43 0 51 0;
-#X connect 44 0 69 0;
+#X connect 44 0 65 0;
 #X connect 45 0 42 3;
 #X connect 47 0 35 0;
 #X connect 47 1 48 0;
@@ -149,36 +154,41 @@
 #X connect 49 0 45 0;
 #X connect 50 0 36 1;
 #X connect 51 0 42 1;
-#X connect 52 0 34 0;
-#X connect 53 0 54 0;
-#X connect 54 0 52 0;
-#X connect 54 0 57 0;
-#X connect 54 0 58 0;
-#X connect 55 0 50 1;
-#X connect 56 0 51 1;
-#X connect 57 0 36 0;
-#X connect 58 0 42 0;
-#X connect 59 0 70 0;
-#X connect 59 1 8 0;
-#X connect 60 0 80 1;
-#X connect 61 0 80 2;
-#X connect 66 0 9 1;
-#X connect 66 1 21 1;
-#X connect 66 2 22 1;
-#X connect 67 0 14 0;
-#X connect 68 0 40 0;
-#X connect 68 0 36 2;
-#X connect 69 0 46 0;
-#X connect 69 0 42 2;
-#X connect 70 0 7 0;
-#X connect 72 0 74 0;
-#X connect 72 0 78 0;
-#X connect 73 0 72 0;
-#X connect 74 0 75 0;
-#X connect 74 1 76 0;
-#X connect 75 0 71 0;
-#X connect 76 0 77 0;
-#X connect 77 0 71 0;
-#X connect 79 0 80 0;
-#X connect 80 0 63 0;
-#X connect 80 1 62 0;
+#X connect 52 0 53 0;
+#X connect 53 0 77 0;
+#X connect 53 0 78 0;
+#X connect 53 0 79 0;
+#X connect 54 0 50 1;
+#X connect 55 0 51 1;
+#X connect 56 0 76 1;
+#X connect 57 0 76 2;
+#X connect 62 0 9 1;
+#X connect 62 1 21 1;
+#X connect 62 2 22 1;
+#X connect 63 0 14 0;
+#X connect 64 0 40 0;
+#X connect 64 0 36 2;
+#X connect 65 0 46 0;
+#X connect 65 0 42 2;
+#X connect 66 0 7 0;
+#X connect 68 0 70 0;
+#X connect 68 0 74 0;
+#X connect 69 0 68 0;
+#X connect 70 0 71 0;
+#X connect 70 1 72 0;
+#X connect 71 0 67 0;
+#X connect 72 0 73 0;
+#X connect 73 0 67 0;
+#X connect 75 0 76 0;
+#X connect 76 0 59 0;
+#X connect 76 1 58 0;
+#X connect 77 0 34 0;
+#X connect 78 0 36 0;
+#X connect 79 0 42 0;
+#X connect 80 0 54 0;
+#X connect 81 0 55 0;
+#X connect 82 0 80 0;
+#X connect 82 0 81 0;
+#X connect 83 0 82 0;
+#X connect 84 0 66 0;
+#X connect 84 1 8 0;
