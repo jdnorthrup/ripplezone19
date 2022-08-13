@@ -1,4 +1,4 @@
-#N canvas 708 189 444 429 10;
+#N canvas 636 211 444 429 10;
 #X obj 72 11 loadbang;
 #N canvas 62 736 732 429 bg_loops 0;
 #X msg 87 116 1;
@@ -28,18 +28,17 @@
 #X connect 9 0 10 0;
 #X connect 10 0 6 0;
 #X restore 77 196 pd bg_loops;
-#N canvas 1031 620 838 728 select_file 0;
+#N canvas 922 209 838 728 select_file 1;
 #X msg 135 221 seek \$1;
 #X obj 135 194 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 5 256;
+-228856 -1 -1 6 256;
 #X obj 135 118 bng 18 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X msg 96 220 next;
-#X obj 222 145 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 11 256;
-#X obj 135 168 else/rand.i 1 1;
+#X obj 245 96 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 12 256;
 #X obj 219 223 else/initmess n \, dir;
-#X text 271 143 n;
+#X text 295 94 n;
 #X msg 133 315 \$2/\$1;
 #X obj 133 286 pack s s;
 #X obj 134 353 symbol;
@@ -47,21 +46,22 @@
 #X obj 139 67 inlet;
 #X obj 135 253 else/dir audio/medium;
 #X obj 224 298 print background:;
-#X connect 0 0 13 0;
+#X obj 135 168 else/rand.i 1 12;
+#X connect 0 0 12 0;
 #X connect 1 0 0 0;
-#X connect 2 0 5 0;
-#X connect 3 0 13 0;
-#X connect 4 0 5 2;
-#X connect 5 0 1 0;
-#X connect 6 0 13 0;
-#X connect 8 0 10 0;
-#X connect 9 0 8 0;
-#X connect 10 0 11 0;
-#X connect 12 0 2 0;
-#X connect 13 0 9 0;
-#X connect 13 0 14 0;
-#X connect 13 1 9 1;
-#X connect 13 2 4 0;
+#X connect 2 0 14 0;
+#X connect 3 0 12 0;
+#X connect 4 0 14 2;
+#X connect 5 0 12 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 11 0 2 0;
+#X connect 12 0 8 0;
+#X connect 12 0 13 0;
+#X connect 12 1 8 1;
+#X connect 12 2 4 0;
+#X connect 14 0 1 0;
 #X coords 0 -1 1 1 60 40 1 100 100;
 #X restore 73 135 pd select_file;
 #X obj 179 216 sig~;
