@@ -1,7 +1,7 @@
 #N canvas 300 249 1331 672 10;
 #X obj 146 572 dorien_sketch;
 #X obj 272 367 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 0;
 #X obj 146 549 expr $i1==0;
 #X obj 241 550 expr $i1==1;
 #X obj 261 8 notein 1;
@@ -65,7 +65,7 @@
 #X msg 722 85 start;
 #X msg 770 85 stop;
 #X msg 802 50 loop \$1;
-#X obj 802 30 tgl 15 0 empty empty empty 17 7 0 10 -228856 -1 -1 1
+#X obj 802 30 tgl 15 0 empty empty empty 17 7 0 10 -228856 -1 -1 0
 1;
 #X obj 818 76 tgl 15 0 empty empty empty 17 7 0 10 -228856 -1 -1 0
 1;
@@ -74,8 +74,8 @@
 #X msg 924 104 set dholak.aif;
 #X text 652 135 comment;
 #X obj 809 211 send~ g_testTone;
-#X obj 813 175 *~ 3;
-#X obj 817 134 else/play.file~ test1.wav 1 1;
+#X obj 813 175 *~ 2;
+#X obj 817 134 else/play.file~ test1.wav 0 1;
 #X connect 0 0 27 0;
 #X connect 0 1 27 1;
 #X connect 1 0 2 0;
