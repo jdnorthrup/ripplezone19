@@ -1,4 +1,4 @@
-#N canvas 309 139 1331 672 10;
+#N canvas 32 56 1331 672 10;
 #X obj 146 572 dorien_sketch;
 #X obj 272 367 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
@@ -58,7 +58,6 @@
 #X msg 392 166 5;
 #X msg 431 168 6;
 #X msg 469 168 7;
-#X obj 241 572 ripples_sketch_amp 1.5 2 37 3;
 #X obj 841 76 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000
 #000000;
 #X msg 722 85 start;
@@ -76,6 +75,7 @@
 #X obj 813 175 *~ 2;
 #X obj 817 134 else/play.file~ test1.wav 0 1;
 #X msg 123 309 set 0.7;
+#X obj 241 572 ripples_sketch_amp 1.5 2;
 #X connect 0 0 27 0;
 #X connect 0 1 27 1;
 #X connect 1 0 2 0;
@@ -88,7 +88,7 @@
 #X connect 1 0 51 0;
 #X connect 1 0 3 0;
 #X connect 2 0 0 0;
-#X connect 3 0 56 0;
+#X connect 3 0 70 0;
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;
 #X connect 5 0 38 0;
@@ -117,7 +117,7 @@
 #X connect 26 0 25 0;
 #X connect 28 0 30 0;
 #X connect 28 1 31 0;
-#X connect 29 0 70 0;
+#X connect 29 0 69 0;
 #X connect 30 0 27 0;
 #X connect 31 0 27 1;
 #X connect 32 0 27 0;
@@ -157,17 +157,17 @@
 #X connect 53 0 1 0;
 #X connect 54 0 1 0;
 #X connect 55 0 1 0;
-#X connect 56 0 27 0;
-#X connect 56 1 27 1;
-#X connect 57 0 69 0;
-#X connect 58 0 69 0;
-#X connect 59 0 69 0;
-#X connect 60 0 69 0;
-#X connect 61 0 60 0;
-#X connect 62 0 69 0;
-#X connect 63 0 69 0;
-#X connect 64 0 69 0;
-#X connect 65 0 69 0;
+#X connect 56 0 68 0;
+#X connect 57 0 68 0;
+#X connect 58 0 68 0;
+#X connect 59 0 68 0;
+#X connect 60 0 59 0;
+#X connect 61 0 68 0;
+#X connect 62 0 68 0;
+#X connect 63 0 68 0;
+#X connect 64 0 68 0;
+#X connect 67 0 66 0;
 #X connect 68 0 67 0;
-#X connect 69 0 68 0;
-#X connect 70 0 28 0;
+#X connect 69 0 28 0;
+#X connect 70 0 27 0;
+#X connect 70 1 27 1;

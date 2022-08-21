@@ -78,7 +78,7 @@
 #X obj 777 193 +~;
 #X obj 259 198 switch~;
 #X obj 175 104 tgl 15 1 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 161 79 inlet;
 #X obj 255 119 select 1 0;
 #X msg 254 147 1;
@@ -97,10 +97,10 @@
 #X obj 491 520 else/loadbanger;
 #X obj 490 496 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 771 94 mic_controller_jdn \$3 \$4;
 #X obj 609 576 else/chance 10 100;
 #X obj 737 605 else/chance 10 90;
 #X obj 830 630 else/chance 10 80;
+#X obj 771 94 mic_controller_jdn 37 3;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -124,7 +124,7 @@
 #X connect 23 0 59 0;
 #X connect 24 0 59 0;
 #X connect 25 0 60 0;
-#X connect 25 0 82 0;
+#X connect 25 0 81 0;
 #X connect 26 0 24 0;
 #X connect 26 1 25 0;
 #X connect 27 0 28 0;
@@ -185,10 +185,10 @@
 #X connect 79 0 77 0;
 #X connect 79 0 78 0;
 #X connect 80 0 79 0;
-#X connect 81 0 63 0;
-#X connect 81 1 8 0;
-#X connect 82 0 35 0;
+#X connect 81 0 35 0;
+#X connect 81 1 82 0;
+#X connect 82 0 39 0;
 #X connect 82 1 83 0;
-#X connect 83 0 39 0;
-#X connect 83 1 84 0;
-#X connect 84 0 45 0;
+#X connect 83 0 45 0;
+#X connect 84 0 63 0;
+#X connect 84 1 8 0;
