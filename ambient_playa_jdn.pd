@@ -4,15 +4,15 @@
 #X msg 87 116 1;
 #X msg 73 150 0;
 #X obj 27 211 readsf~ 2;
-#X obj 157 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 157 90 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X obj 185 250 delay 200;
 #X msg 218 207 open \$1;
 #X obj 191 170 t b l;
 #X obj 17 278 outlet~;
 #X obj 80 280 outlet~;
 #X obj 167 20 inlet;
-#X symbolatom 215 115 80 0 0 0 - - -;
+#X symbolatom 215 115 80 0 0 0 - - - 0;
 #X obj 187 289 outlet;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
@@ -28,15 +28,15 @@
 #X connect 9 0 10 0;
 #X connect 10 0 6 0;
 #X restore 77 196 pd bg_loops;
-#N canvas 806 193 838 728 select_file 1;
+#N canvas 806 193 838 728 select_file 0;
 #X msg 135 221 seek \$1;
 #X obj 135 194 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 4 256;
-#X obj 135 118 bng 18 250 50 0 empty empty empty 17 7 0 10 -228856
--1 -1;
+#dcdcdc #000000 #000000 0 256;
+#X obj 135 118 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
+#000000 #000000;
 #X msg 96 220 next;
 #X obj 245 96 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 12 256;
+#dcdcdc #000000 #000000 0 256;
 #X obj 219 223 else/initmess n \, dir;
 #X text 295 94 n;
 #X msg 133 315 \$2/\$1;
@@ -72,7 +72,7 @@
 #X coords 0 -1 1 1 60 40 1 100 100;
 #X restore 73 135 pd select_file;
 #X obj 179 216 sig~;
-#N canvas 1642 646 785 441 stero_duck_micOn 0;
+#N canvas 900 406 785 441 stero_duck_micOn 1;
 #X obj 85 192 outlet~;
 #X obj 295 197 outlet~;
 #X obj 55 25 inlet~;
@@ -91,17 +91,17 @@
 #X connect 6 0 9 0;
 #X connect 7 0 0 0;
 #X connect 8 0 1 0;
-#X connect 9 0 7 2;
-#X connect 9 0 8 2;
+#X connect 9 0 8 0;
+#X connect 9 0 7 0;
 #X restore 104 260 pd stero_duck_micOn;
 #X obj 185 188 r micOn;
 #X obj 338 58 switch~;
-#X obj 339 35 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 339 35 tgl 15 1 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
 #X obj 340 13 inlet;
 #X obj 159 10 inlet;
-#X obj 116 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 116 79 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X obj 110 319 outlet~;
 #X obj 199 321 outlet~;
 #X connect 0 0 10 0;
