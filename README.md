@@ -2,6 +2,13 @@
 Pure Data patch for AquaZone sonic installation
 
 TODO:
+- have the carriers looping in memory and just pick which one dynamically - fix glitches!
+- wet
+- flow
+- lattice
+- rain
+- more/better ambient tracks
+- check levels on ambient tracks
 x - get MIDI knobs working on Pi.
 x - get audio input working on Pi.
 x - make sure ELSE library works on Pi.
@@ -80,10 +87,10 @@ x - maybe a timer on a switch?
 - how to "VNC" in on-playa? maybe set up on my work laptop?
 
 Hardware:
-- make the box
-- paint / cover the box with fur
-- which mic?
-- how to mount mic?
+x - make the box
+x - paint / cover the box with fur
+x - which mic?
+x - how to mount mic?
 x - which switches / lights? (adafruit 30mm?)
 NOPE - wire switches + lights into PI
 NOPE - do i need anything i could get at lasher?
