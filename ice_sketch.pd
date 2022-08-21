@@ -1,4 +1,4 @@
-#N canvas 0 96 1024 672 10;
+#N canvas 987 130 1024 672 10;
 #X obj 600 356 vsl 18 80 -100 0 0 0 empty empty empty 0 -9 0 10 -228856
 -1 -1 7900 1;
 #X obj 476 395 nbx 5 14 -100 0 0 1 empty empty empty 0 -8 0 10 -228856
@@ -20,7 +20,7 @@
 #X obj 501 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X text 523 249 <= reset;
-#X obj 539 27 mic_controller_jdn 39 7;
+#X obj 547 33 mic_controller_jdn 39 7;
 #X obj 569 211 select 1;
 #X obj 473 506 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -228856 -1 -1 0 256;
@@ -109,3 +109,4 @@
 #X connect 51 0 41 0;
 #X connect 52 0 8 0;
 #X connect 53 0 9 0;
+#X connect 53 0 50 0;

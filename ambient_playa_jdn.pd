@@ -28,10 +28,10 @@
 #X connect 9 0 10 0;
 #X connect 10 0 6 0;
 #X restore 77 196 pd bg_loops;
-#N canvas 922 209 838 728 select_file 1;
+#N canvas 806 193 838 728 select_file 1;
 #X msg 135 221 seek \$1;
 #X obj 135 194 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 6 256;
+-228856 -1 -1 4 256;
 #X obj 135 118 bng 18 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X msg 96 220 next;
@@ -47,6 +47,10 @@
 #X obj 135 253 else/dir audio/medium;
 #X obj 224 298 print background:;
 #X obj 135 168 else/rand.i 1 12;
+#X obj 296 175 random;
+#X obj 479 32 loadbang;
+#X obj 480 73 cputime;
+#X msg 491 124 seed \$1;
 #X connect 0 0 12 0;
 #X connect 1 0 0 0;
 #X connect 2 0 14 0;
@@ -62,6 +66,9 @@
 #X connect 12 1 8 1;
 #X connect 12 2 4 0;
 #X connect 14 0 1 0;
+#X connect 16 0 17 1;
+#X connect 17 0 18 0;
+#X connect 18 0 14 0;
 #X coords 0 -1 1 1 60 40 1 100 100;
 #X restore 73 135 pd select_file;
 #X obj 179 216 sig~;
