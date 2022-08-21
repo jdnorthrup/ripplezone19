@@ -59,7 +59,7 @@
 #X obj 675 720 * 1.5;
 #X obj 964 734 * 2;
 #X obj 556 1059 loadbang;
-#X obj 555 1081 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 573 1078 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 687 684 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 1.5 256;
