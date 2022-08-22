@@ -1,4 +1,4 @@
-#N canvas 0 23 1440 855 10;
+#N canvas 172 48 1440 855 10;
 #X obj 980 411 tgl 30 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 976 533 timer;
@@ -61,14 +61,14 @@
 #X obj 556 1059 loadbang;
 #X obj 573 1078 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 687 684 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 #fcfcfc
+#X obj 687 688 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 1.5 256;
 #X obj 977 705 nbx 5 14 0.1 5 0 1 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 2 256;
-#X obj 700 1158 +~;
-#X obj 935 1154 +~;
-#X obj 864 1242 outlet~;
-#X obj 726 1247 outlet~;
+#X obj 698 1149 +~;
+#X obj 945 1151 +~;
+#X obj 867 1295 outlet~;
+#X obj 729 1300 outlet~;
 #X text 820 317 4nd;
 #X text 820 332 5rd;
 #X obj 557 346 else/router 3;
@@ -85,8 +85,8 @@
 #X obj 290 148 delay 500;
 #X msg 289 173 0;
 #X obj 172 144 s \$0-enable;
-#X obj 661 1187 r \$0-enable;
-#X obj 740 1210 else/autofade2~ 150 500 2;
+#X obj 664 1240 r \$0-enable;
+#X obj 743 1263 else/autofade2~ 150 500 2;
 #X msg 301 1115 echoAmp 1 0.8 0.6 0.5 \, echoWet 0.3 0.7 0.9 1;
 #X msg 616 1115 echoAmp 0.1 0.6 0.4 0.9 \, echoWet 0.8 0.85 0.2 0.77
 ;
@@ -101,6 +101,10 @@
 #X obj 737 605 else/chance 10 90;
 #X obj 830 630 else/chance 10 80;
 #X obj 771 94 mic_controller_jdn 37 3;
+#X obj 707 1205 else/plate.rev~ 180 0.5 0.25 0.9 0.33;
+#X obj 945 1207 else/plate.rev~ 200 0.5 0.25 0.9 0.33;
+#X obj 699 1176 else/phaser~;
+#X obj 946 1175 else/phaser~;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -155,8 +159,8 @@
 #X connect 50 0 76 0;
 #X connect 51 0 47 1;
 #X connect 52 0 48 1;
-#X connect 53 0 73 1;
-#X connect 54 0 73 2;
+#X connect 53 0 87 0;
+#X connect 54 0 88 0;
 #X connect 59 0 9 1;
 #X connect 59 1 21 1;
 #X connect 59 2 22 1;
@@ -192,3 +196,7 @@
 #X connect 83 0 45 0;
 #X connect 84 0 63 0;
 #X connect 84 1 8 0;
+#X connect 85 0 73 1;
+#X connect 86 1 73 2;
+#X connect 87 0 85 0;
+#X connect 88 0 86 0;
