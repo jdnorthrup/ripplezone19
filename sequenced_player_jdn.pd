@@ -131,7 +131,6 @@
 #000000 #000000;
 #X obj 412 306 r~ car1-L;
 #X obj 521 306 r~ car1-R;
-#X obj 511 373 print player;
 #X connect 1 0 6 0;
 #X connect 1 0 6 1;
 #X connect 1 0 17 1;
@@ -156,7 +155,6 @@
 #X connect 17 0 6 2;
 #X connect 18 0 6 3;
 #X connect 19 0 24 0;
-#X connect 19 0 26 0;
 #X connect 20 0 25 0;
 #X connect 21 0 19 0;
 #X connect 21 0 20 0;

@@ -141,7 +141,7 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 24 1 25 0;
 #X connect 26 0 19 1;
 #X restore 52 27 pd hann-window;
-#N canvas 1337 139 325 395 carriers 1;
+#N canvas 1337 139 325 395 carriers 0;
 #X obj 41 23 carrier_player_global 1 car1;
 #X obj 41 48 carrier_player_global 2 car2;
 #X obj 41 75 carrier_player_global 3 car3;
@@ -156,6 +156,7 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X obj 40 304 carrier_player_global 12 car12;
 #X obj 39 327 carrier_player_global 13 car13;
 #X restore 52 56 pd carriers;
+#X obj 264 507 wet_sketch;
 #X connect 0 0 27 0;
 #X connect 0 1 27 1;
 #X connect 1 0 2 0;
@@ -233,6 +234,7 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 46 0 14 0;
 #X connect 47 0 14 0;
 #X connect 48 0 14 0;
+#X connect 49 0 73 0;
 #X connect 52 0 1 0;
 #X connect 53 0 1 0;
 #X connect 54 0 1 0;
@@ -251,3 +253,5 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 69 0 28 0;
 #X connect 70 0 27 0;
 #X connect 70 1 27 1;
+#X connect 73 0 27 0;
+#X connect 73 1 27 1;

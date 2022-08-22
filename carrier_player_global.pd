@@ -18,8 +18,8 @@
 #X msg 28 461 set \$1;
 #X text 156 30 Load;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array \$0-Sample_Loop_A 46592 float 2;
-#X coords 0 1 46592 -1 256 64 2 0 0;
+#X array \$0-Sample_Loop_A 2.74586e+06 float 2;
+#X coords 0 1 2.74586e+06 -1 256 64 2 0 0;
 #X restore 28 46 graph;
 #X obj 31 110 hsl 251 8 0 1 0 0 empty empty empty 0 0 0 10 #fcfcfc
 #000000 #000000 0 0;
@@ -28,8 +28,8 @@
 #X msg 157 362 1;
 #X obj 340 44 inlet;
 #N canvas 0 23 450 278 (subpatch) 0;
-#X array \$0-Sample_Loop_A_R 46592 float 2;
-#X coords 0 1 46592 -1 200 140 1 0 0;
+#X array \$0-Sample_Loop_A_R 2.74586e+06 float 2;
+#X coords 0 1 2.74586e+06 -1 200 140 1 0 0;
 #X restore 702 34 graph;
 #X msg 336 321 \$3;
 #X text 417 516 mono support;
@@ -74,6 +74,10 @@
 #X obj 477 207 print carrier player;
 #X obj 94 589 s~ \$2-L;
 #X obj 263 593 s~ \$2-R;
+#X obj 560 434 env~ 128;
+#X obj 565 502 vu 15 120 empty Input_Level -1 -8 0 10 #404040 #000000
+1 0;
+#X obj 562 461 - 100;
 #X connect 0 0 29 0;
 #X connect 1 0 6 0;
 #X connect 1 0 4 0;
@@ -107,6 +111,7 @@
 #X connect 26 0 25 0;
 #X connect 27 0 25 0;
 #X connect 27 0 38 0;
+#X connect 27 0 40 0;
 #X connect 28 0 25 1;
 #X connect 29 0 1 0;
 #X connect 30 0 31 0;
@@ -120,3 +125,5 @@
 #X connect 34 0 33 0;
 #X connect 35 0 34 0;
 #X connect 36 0 35 0;
+#X connect 40 0 42 0;
+#X connect 42 0 41 0;
