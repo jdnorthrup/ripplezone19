@@ -123,7 +123,7 @@
 #X obj 108 384 outlet~;
 #X obj 197 386 outlet~;
 #X obj 90 106 t b b;
-#X obj 82 57 delay 4000;
+#X obj 82 57 delay 34000;
 #X connect 0 0 14 0;
 #X connect 1 0 4 0;
 #X connect 1 1 4 1;
