@@ -2,13 +2,16 @@
 Pure Data patch for AquaZone sonic installation
 
 TODO:
-- have the carriers looping in memory and just pick which one dynamically - fix glitches!
-- wet
+- [x] have the carriers looping in memory and just pick which one dynamically - fix glitches!
+- [x] wet
 - flow
-- lattice
-- rain
-- more/better ambient tracks
-- check levels on ambient tracks
+- [x] lattice
+- [x] rain
+- [] more/better ambient tracks
+- [] check levels on ambient tracks
+- [] normalize carriers
+- [] after a couple minues: chase lights, circle, tracers, sine fade out
+- [] longer duck of ambient
 x - get MIDI knobs working on Pi.
 x - get audio input working on Pi.
 x - make sure ELSE library works on Pi.
