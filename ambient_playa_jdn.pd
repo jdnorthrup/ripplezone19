@@ -38,7 +38,7 @@
 #X connect 9 0 5 0;
 #X connect 14 0 9 0;
 #X connect 15 0 0 0;
-#X restore 77 196 pd bg_loops;
+#X restore 75 261 pd bg_loops;
 #N canvas 792 210 838 728 select_file 0;
 #X msg 138 279 seek \$1;
 #X obj 138 252 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -88,8 +88,8 @@
 #X connect 20 0 1 0;
 #X connect 21 0 15 1;
 #X coords 0 -1 1 1 60 40 1 100 100;
-#X restore 73 135 pd select_file;
-#X obj 179 216 sig~;
+#X restore 71 200 pd select_file;
+#X obj 177 281 sig~;
 #N canvas 900 406 785 441 stero_duck_micOn 0;
 #X obj 85 192 outlet~;
 #X obj 295 197 outlet~;
@@ -111,19 +111,20 @@
 #X connect 8 0 1 0;
 #X connect 9 0 8 0;
 #X connect 9 0 7 0;
-#X restore 104 260 pd stero_duck_micOn;
-#X obj 185 188 r micOn;
+#X restore 102 325 pd stero_duck_micOn;
+#X obj 183 253 r micOn;
 #X obj 338 58 switch~;
 #X obj 339 35 tgl 15 1 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
 #X obj 340 13 inlet;
 #X obj 199 10 inlet;
-#X obj 208 84 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 110 319 outlet~;
-#X obj 199 321 outlet~;
-#X obj 92 41 t b b;
-#X connect 0 0 13 0;
+#X obj 206 149 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 108 384 outlet~;
+#X obj 197 386 outlet~;
+#X obj 90 106 t b b;
+#X obj 82 57 delay 4000;
+#X connect 0 0 14 0;
 #X connect 1 0 4 0;
 #X connect 1 1 4 1;
 #X connect 1 2 10 0;
@@ -139,3 +140,4 @@
 #X connect 10 0 2 0;
 #X connect 13 0 10 0;
 #X connect 13 1 2 1;
+#X connect 14 0 13 0;
