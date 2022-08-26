@@ -29,7 +29,7 @@
 #X msg 543 287 100 1;
 #X obj 495 251 t b b;
 #X obj 114 318 receive~ g_testTone;
-#X obj 211 388 *~ 3, f 5;
+#X obj 211 388 *~ 8, f 5;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 10 0;
