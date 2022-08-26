@@ -1,4 +1,4 @@
-#N canvas 418 66 1044 779 10;
+#N canvas 625 47 1044 779 10;
 #X obj 154 483 dorien_sketch;
 #X obj 265 283 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
@@ -28,7 +28,7 @@
 #X obj 48 235 ambient_playa_jdn;
 #X obj 46 198 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 55 287 else/gain2~ 1 0 20 0 0;
+#X obj 55 287 else/gain2~ 1 0 20 0 0.7;
 #X obj 124 278 loadbang;
 #X obj 45 482 +~;
 #X obj 79 480 +~;
@@ -158,22 +158,6 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X obj 272 418 wet_sketch;
 #X obj 237 553 else/gain2~ 1 0 20 0 1;
 #X obj 229 725 dac~;
-#X obj 409 557 env~ 128;
-#X obj 413 618 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
-;
-#X obj 411 584 - 100;
-#X obj 344 558 env~ 128;
-#X obj 348 619 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
-;
-#X obj 346 585 - 100;
-#X obj 102 551 env~ 128;
-#X obj 106 612 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
-;
-#X obj 104 578 - 100;
-#X obj 37 552 env~ 128;
-#X obj 41 613 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
-;
-#X obj 39 579 - 100;
 #X msg 172 558 set 1;
 #X obj 513 412 lattice_sketch;
 #X obj 430 484 rain_sketch 1.33 2.5;
@@ -209,7 +193,7 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 18 0 14 0;
 #X connect 19 0 36 0;
 #X connect 19 1 43 0;
-#X connect 20 0 89 0;
+#X connect 20 0 77 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
 #X connect 22 0 24 0;
@@ -220,11 +204,9 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 27 0 29 0;
 #X connect 27 1 30 0;
 #X connect 28 0 68 0;
-#X connect 28 0 87 0;
+#X connect 28 0 75 0;
 #X connect 29 0 73 0;
-#X connect 29 0 84 0;
 #X connect 30 0 73 1;
-#X connect 30 0 81 0;
 #X connect 31 0 73 0;
 #X connect 31 1 73 1;
 #X connect 32 0 31 0;
@@ -259,7 +241,7 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 46 0 14 0;
 #X connect 47 0 14 0;
 #X connect 48 0 72 0;
-#X connect 50 0 88 0;
+#X connect 50 0 76 0;
 #X connect 51 0 1 0;
 #X connect 52 0 1 0;
 #X connect 53 0 1 0;
@@ -281,19 +263,9 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 72 0 73 0;
 #X connect 72 1 73 1;
 #X connect 73 0 74 0;
-#X connect 73 0 78 0;
 #X connect 73 1 74 1;
-#X connect 73 1 75 0;
-#X connect 75 0 77 0;
-#X connect 77 0 76 0;
-#X connect 78 0 80 0;
-#X connect 80 0 79 0;
-#X connect 81 0 83 0;
-#X connect 83 0 82 0;
-#X connect 84 0 86 0;
-#X connect 86 0 85 0;
-#X connect 87 0 73 0;
-#X connect 88 0 73 0;
-#X connect 88 1 73 1;
-#X connect 89 0 73 0;
-#X connect 89 1 73 1;
+#X connect 75 0 73 0;
+#X connect 76 0 73 0;
+#X connect 76 1 73 1;
+#X connect 77 0 73 0;
+#X connect 77 1 73 1;

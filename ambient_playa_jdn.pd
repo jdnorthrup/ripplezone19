@@ -90,7 +90,7 @@
 #X coords 0 -1 1 1 60 40 1 100 100;
 #X restore 71 200 pd select_file;
 #X obj 177 281 sig~;
-#N canvas 900 406 785 441 stero_duck_micOn 0;
+#N canvas 900 406 785 441 stero_duck_micOn 1;
 #X obj 85 192 outlet~;
 #X obj 295 197 outlet~;
 #X obj 55 25 inlet~;
@@ -100,8 +100,10 @@
 #X obj 472 26 loadbang;
 #X obj 57 127 else/duck~;
 #X obj 288 129 else/duck~;
-#X msg 474 65 thresh -10 \, ratio 0.66 \, attack 100 \, release 500
+#X msg 474 65 thresh -10 \, ratio 0.66 \, attack 300 \, release 2000
 ;
+#X obj 552 28 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X connect 2 0 7 0;
 #X connect 3 0 8 0;
 #X connect 4 0 7 1;
@@ -111,6 +113,7 @@
 #X connect 8 0 1 0;
 #X connect 9 0 8 0;
 #X connect 9 0 7 0;
+#X connect 10 0 9 0;
 #X restore 102 325 pd stero_duck_micOn;
 #X obj 183 253 r micOn;
 #X obj 338 58 switch~;
