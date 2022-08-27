@@ -162,6 +162,13 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X obj 430 484 rain_sketch 1.33 2.5;
 #X msg 505 208 0;
 #X obj 394 420 flow_sketch;
+#N canvas 14 488 214 232 meters 0;
+#X obj 44 22 inlet~;
+#X obj 105 22 inlet~;
+#X obj 41 54 else/meter2~;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X restore 274 699 pd meters;
 #X connect 0 0 72 0;
 #X connect 0 1 72 1;
 #X connect 1 0 2 0;
@@ -264,7 +271,9 @@ and window-msec (analysis window size in seconds and msec)., f 56
 #X connect 71 0 72 0;
 #X connect 71 1 72 1;
 #X connect 72 0 73 0;
+#X connect 72 0 79 0;
 #X connect 72 1 73 1;
+#X connect 72 1 79 1;
 #X connect 74 0 72 0;
 #X connect 75 0 72 0;
 #X connect 75 1 72 1;

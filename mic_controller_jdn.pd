@@ -1,4 +1,4 @@
-#N canvas 687 254 939 810 10;
+#N canvas 636 0 939 810 10;
 #X obj 98 405 env~ 128;
 #X obj 103 473 vu 15 120 empty Input_Level -1 -8 0 10 #404040 #000000
 1 0;
@@ -9,13 +9,13 @@
 #X obj 452 219 expr $i1 == 0;
 #X obj 691 209 loadbang;
 #X obj 514 131 / 127;
-#X obj 201 346 adc~ 1;
+#X obj 87 199 adc~ 1;
 #X obj 261 277 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 220 451 *~;
-#X text 304 343 mic input level;
+#X obj 211 523 *~;
+#X text 62 327 mic input level;
 #X obj 332 388 s micOn;
-#X obj 216 526 outlet~;
+#X obj 211 582 outlet~;
 #X obj 508 92 ctlin \$1 1;
 #X obj 389 87 notein 1;
 #X obj 389 119 pack 0 0;
@@ -23,13 +23,16 @@
 #X obj 259 423 line~ 0 20;
 #X text 549 400 control LED \, reset after record button released;
 #X text 110 129 \$1 is note# \, \$2 is light cc;
-#X obj 318 526 outlet;
+#X obj 397 591 outlet;
 #X obj 459 288 float \$2;
 #X obj 471 325 list append;
 #X msg 543 287 100 1;
 #X obj 495 251 t b b;
-#X obj 114 318 receive~ g_testTone;
-#X obj 211 388 *~ 8, f 5;
+#X obj 392 466 receive~ g_testTone;
+#X obj 38 306 vsl 18 80 -12 0 0 0 empty empty empty 0 -9 0 10 #dcdcdc
+#000000 #000000 0 1;
+#X obj 45 241 else/compress~ -16 3 30 500 0 256;
+#X obj 211 388 *~ 4, f 5;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 10 0;
@@ -38,7 +41,7 @@
 #X connect 5 2 4 2;
 #X connect 6 0 26 0;
 #X connect 7 0 26 0;
-#X connect 9 0 28 0;
+#X connect 9 0 29 0;
 #X connect 10 0 19 0;
 #X connect 10 0 13 0;
 #X connect 10 0 22 0;
@@ -56,5 +59,7 @@
 #X connect 26 0 23 0;
 #X connect 26 1 25 0;
 #X connect 27 0 11 0;
-#X connect 28 0 0 0;
-#X connect 28 0 11 0;
+#X connect 29 0 30 0;
+#X connect 29 1 28 0;
+#X connect 30 0 0 0;
+#X connect 30 0 11 0;
