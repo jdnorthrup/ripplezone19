@@ -7,11 +7,11 @@ TODO:
 - flow
 - [x] lattice
 - [x] rain
-- [] more/better ambient tracks
-- [] check levels on ambient tracks
-- [] normalize carriers
+- [x] more/better ambient tracks
+- [x] check levels on ambient tracks
+- [x] normalize carriers
 - [] after a couple minues: chase lights, circle, tracers, sine fade out
-- [] longer duck of ambient
+- [x] longer duck of ambient
 x - get MIDI knobs working on Pi.
 x - get audio input working on Pi.
 x - make sure ELSE library works on Pi.
@@ -31,14 +31,14 @@ x - ripple fx cascade pattern
 x need to have the graphs remembered in the parent patch somehow?
 x - rotating bank of fx
 x - clearing buffers
-- definitely do the carriers in ram
-- why is ripples sketch so much louder than the others for mic input?
-- set the light of the current sketch on startup
-- trim more samples, don't have fades in audio
-- recorders have some better persistence
+x - definitely do the carriers in ram
+x - why is ripples sketch so much louder than the others for mic input?
+x - set the light of the current sketch on startup
+x - trim more samples, don't have fades in audio
+x - recorders have some better persistence
 - more banks?
 - clear out buffers when switching back?
-- mystery of the recorder_jdn buffers clearing, is it right?
+x - mystery of the recorder_jdn buffers clearing, is it right?
 
 CBB:
 - add else/autofade for loops ?
